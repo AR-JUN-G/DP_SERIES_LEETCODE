@@ -14,7 +14,7 @@ bool check(int index,int target,vector<int>&arr,vector<vector<int>>&dp)
         pick=check(index-1,target-arr[index],arr,dp);
     }
     bool notPick=check(index-1,target,arr,dp);
-    return dp[index][target]=pick||notPick;
+    return dp[index][target]=pick|notPick;
 }
 
 bool subsetSumToK(int n, int k, vector<int> &arr) {
